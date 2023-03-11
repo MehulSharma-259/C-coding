@@ -1,0 +1,6 @@
+Hello guys!! 
+This is the text file for testing the code of file input output.
+It has the extension of .txt 
+It is stored in sub folder named File_input_output.
+Bye guys !!
+Happy coding in C !!
