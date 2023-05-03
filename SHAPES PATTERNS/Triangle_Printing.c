@@ -1,32 +1,32 @@
 // // TWO ANOTHER METHOD ARE AT THE BOTTOM OF THIS CODE
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void main()
-{
-    int rows,i=1,j=1;
+// void main()
+// {
+//     int rows,i=1,j=1;
     
-    printf("Enter the number of rows you want to print :");
-    scanf("%d",&rows);
+//     printf("Enter the number of rows you want to print :");
+//     scanf("%d",&rows);
 
-    for(i=1;i<=rows;i++)
-    {
-        for(j=rows-1;j>=i;j--)
-        {
-            printf(" ");
-        }
-        for(j=1;j<=i;j++)
-        {
-            printf("*");
-        }
-        for(j=1;j<=i-1;j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
+//     for(i=1;i<=rows;i++)
+//     {
+//         for(j=rows-1;j>=i;j--)
+//         {
+//             printf(" ");
+//         }
+//         for(j=1;j<=i;j++)
+//         {
+//             printf("*");
+//         }
+//         for(j=1;j<=i-1;j++)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
 
-}
+// }
 
 
 // Another method!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -80,3 +80,29 @@ void main()
 //         printf("\n");
 //     }
 // }
+
+// The most efficient method !!
+#include <stdio.h>
+
+void main()
+{
+    int rows,i,j;
+
+    printf("Enter the number of rows you want to print :");
+    scanf("%d",&rows);
+
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<rows*2;j++)
+        {
+            if(j<rows-i-1 || j>rows+i-1)
+                printf("%d",j);
+            else
+                printf("*");
+        }
+
+        printf("\n");
+    }
+
+} 
+//11 23 35 47 59

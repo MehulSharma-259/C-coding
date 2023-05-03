@@ -1,6 +1,7 @@
 # include <stdio.h>
 
 void main()
+
 {
     int a,b,rows,c;
     char a1='A',a2='A';
