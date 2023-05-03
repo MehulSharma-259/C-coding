@@ -19,7 +19,7 @@ void Printing_array_elements(int n,int array[n])
 }
 void main()
 {   
-    int i,j,n,temp;
+    int i,j,n,temp,flag=0;
     printf("Enter the number of array elements: ");
     scanf("%d",&n);
     int arr[n];
@@ -31,15 +31,19 @@ void main()
     
     for ( i = 0; i < n; i++)
     {
-        for ( j = 0; j < n; j++)
+        flag=0;
+        for ( j = 0; j < n-1-i; j++)
         {
             if(arr[j]>arr[j+1])
             {
                 temp=arr[j+1];
                 arr[j+1]=arr[j];
                 arr[j]=temp;
+                flag=1;
             }
-        }   
+        } 
+        if(flag==0)  
+            break;
     }   
     Printing_array_elements(n,arr);
 }
